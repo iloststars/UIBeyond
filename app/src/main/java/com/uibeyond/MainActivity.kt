@@ -41,6 +41,9 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             .registerCallback {
+                drag { view, motionEvent ->
+                    view.alpha = 1.0f
+                }
                 dragEnd {
                     //吸附
                     Thread.sleep(500)
